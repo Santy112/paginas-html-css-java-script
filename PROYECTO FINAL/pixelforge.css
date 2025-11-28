@@ -1,0 +1,225 @@
+body {
+  margin: 0; /* Elimina márgenes por defecto del navegador */
+  font-family: "Oswald", sans-serif; /* Aplica la fuente Oswald, y si no está, usa sans-serif */
+  background: linear-gradient(180deg, #000000, #001f3f, #003366); /* Fondo degradado vertical: negro → azul oscuro → azul */
+  color: #e0e0e0; /* Color de texto gris claro */
+  padding: 40px; /* Espacio interno alrededor del contenido */
+}
+
+h1 {
+  text-align: center;  /* Centra el título principal */
+}
+
+h2 {
+  text-align: center; /* Centra subtítulos */
+  font-weight: 300;  /* Grosor de fuente ligero */
+  line-height: 1.4; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+img {
+  width: 285px; /* Tamaño fijo de ancho para la imagen */
+  display: block; /* Se comporta como bloque, permite centrar con margin:auto */
+  opacity: 0.7; /* Transparencia: 70% visible */
+} 
+
+img:hover {
+  opacity: 1;          /* Se vuelve sólido al pasar el mouse */
+  transform: scale(1.05); /* Crece un poquito */
+  transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+footer {
+  text-align: center;        /* Centra el texto */
+  margin-top: 40px;          /* Espacio superior */
+  padding: 15px;             /* Espacio interno */
+  font-size: 0.9rem;         /* Tamaño de fuente más pequeño */
+  color: #aaaaaa;            /* Color gris suave */
+  border-top: 1px solid #000000; /* Línea separadora arriba */
+}
+
+header {
+  display: flex; /* Usa flexbox para organizar elementos en fila */
+  justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 10px 20px; /* Espaciado interno del header */
+}
+
+nav ul {
+  list-style: none; /* Quita los puntitos de la lista */
+  display: flex; /* Pone los ítems en fila */
+  gap: 20px; /* Espacio entre ítems */
+  margin: 0; /* Elimina margen por defecto */
+  padding: 0; /* Elimina padding por defecto */
+}
+
+nav ul li a {
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: #66ccff; /* Color azul claro para los enlaces */
+  font-weight: bold; /* Texto en negrita */
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}
+
+.frase-impacto {
+  text-align: center; /* Centra el bloque de la frase */
+  margin-top: 20px; /* Espacio superior respecto al header */
+  padding: 15px; /* Espacio interno alrededor del texto */
+}
+
+.frase-impacto h2 {
+  font-size: 1.8rem; /* Tamaño de fuente grande */
+  font-weight: 400; /* Grosor medio */
+  color: #66ccff; /* Color azul claro */
+  animation: fadeInDown 1s ease-out; /* Aparece desde arriba con animación suave */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(-30px); /* Empieza desplazado hacia arriba */
+  }
+  to {
+    opacity: 1; /* Termina visible */
+    transform: translateY(0); /* Termina en su posición normal */
+  }
+}
+
+.contacto {
+  text-align: center; /* Centra todo el contenido de la sección contacto */
+  margin-top: 40px;   /* Agrega espacio arriba para separarlo del header */
+}
+
+form {
+  display: flex;              /* Usa flexbox para organizar los campos */
+  flex-direction: column;     /* Coloca los campos uno debajo del otro */
+  gap: 15px;                  /* Espacio entre cada campo */
+  max-width: 400px;           /* Ancho máximo del formulario */
+  margin: 20px auto;          /* Centra el formulario horizontalmente */
+}
+
+input, textarea {
+  padding: 10px;              /* Espacio interno dentro de los campos */
+  border: none;               /* Quita el borde por defecto */
+  border-radius: 5px;         /* Esquinas redondeadas */
+}
+
+button {
+  background-color: #66ccff;  /* Fondo azul claro */
+  color: #000;                /* Texto negro */
+  padding: 12px;              /* Espaciado interno */
+  border: none;               /* Sin borde */
+  border-radius: 5px;         /* Esquinas redondeadas */
+  font-weight: bold;          /* Texto en negrita */
+  cursor: pointer;            /* Cursor tipo mano al pasar encima */
+  transition: background-color 0.3s ease; /* Animación suave al cambiar color */
+}
+
+button:hover {
+  background-color: #3399ff;  /* Al pasar el mouse, se vuelve azul más oscuro */
+}
+
+.info-contacto {
+  margin-top: 30px;           /* Espacio arriba respecto al formulario */
+  color: #cccccc;             /* Texto gris claro */
+}
+
+.redes {
+  margin-top: 30px;           /* Espacio arriba respecto a la info de contacto */
+}
+
+.redes a {
+  color: #66ccff;             /* Enlaces en azul claro */
+  text-decoration: none;      /* Quita el subrayado */
+  font-weight: bold;          /* Texto en negrita */
+  margin: 0 10px;             /* Espacio horizontal entre enlaces */
+  transition: color 0.3s ease;/* Animación suave al cambiar color */
+}
+
+.redes a:hover {
+  color: #ffffff;             /* Al pasar el mouse, se vuelven blancos */
+}
+
+.postulaciones {
+  text-align: center;         /* Centra el contenido de la sección postulaciones */
+  margin-top: 40px;           /* Espacio arriba */
+}
+
+.postulaciones form {
+  display: flex;              /* Flexbox para organizar campos */
+  flex-direction: column;     /* Campos en columna */
+  gap: 15px;                  /* Espacio entre campos */
+  max-width: 500px;           /* Ancho máximo más grande que contacto */
+  margin: 20px auto;          /* Centrado horizontal */
+}
+
+.postulaciones input, 
+.postulaciones textarea, 
+.postulaciones select {
+  padding: 10px;              /* Espacio interno */
+  border: none;               /* Sin borde */
+  border-radius: 5px;         /* Esquinas redondeadas */
+}
+
+.postulaciones button {
+  background-color: #66ccff;  /* Fondo azul claro */
+  color: #000;                /* Texto negro */
+  padding: 12px;              /* Espaciado interno */
+  border: none;               /* Sin borde */
+  border-radius: 5px;         /* Esquinas redondeadas */
+  font-weight: bold;          /* Texto en negrita */
+  cursor: pointer;            /* Cursor tipo mano */
+  transition: background-color 0.3s ease; /* Animación suave */
+}
+
+.postulaciones button:hover {
+  background-color: #3399ff;  /* Azul más oscuro al pasar el mouse */
+}
+
+.proyectos {
+  text-align: center;         /* Centra la sección proyectos */
+  margin-top: 40px;           /* Espacio arriba */
+}
+
+.proyecto {
+  margin: 30px auto;          /* Espacio alrededor y centrado */
+  max-width: 600px;           /* Ancho máximo de cada tarjeta */
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: 20px;              /* Espaciado interno */
+  border-radius: 10px;        /* Esquinas redondeadas */
+  transition: transform 0.3s ease; /* Animación suave al hacer hover */
+}
+
+.proyecto img {
+  width: 100%;                /* Imagen ocupa todo el ancho de la tarjeta */
+  border-radius: 10px;        /* Esquinas redondeadas */
+  margin-bottom: 15px;        /* Espacio debajo de la imagen */
+}
+
+.proyecto:hover {
+  transform: scale(1.03);     /* Efecto zoom al pasar el mouse */
+}
+
+.proyecto h2 {
+  color: #66ccff;             /* Título en azul claro */
+  margin-bottom: 10px;        /* Espacio debajo del título */
+}
+
+/* Modo oscuro */
+.dark-mode {
+  background: linear-gradient(180deg, #ffffff, #cccccc); /* Fondo claro degradado */
+  color: #000000;             /* Texto negro */
+}
+
+/* Animación de proyectos */
+.proyecto.animado {
+  opacity: 0;                 /* Oculto al inicio */
+  transform: translateY(30px);/* Desplazado hacia abajo */
+  transition: all 0.6s ease;  /* Animación suave */
+}
+
+.proyecto.animado.visible {
+  opacity: 1;                 /* Se vuelve visible */
+  transform: translateY(0);   /* Vuelve a su posición normal */
+}
